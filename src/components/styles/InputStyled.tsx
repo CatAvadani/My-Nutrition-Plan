@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputStyled = styled.div`
+export const InputStyled = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
