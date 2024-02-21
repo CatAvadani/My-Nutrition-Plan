@@ -43,9 +43,6 @@ function App() {
   // const APP_ID = "id";
   // const APP_KEY = "key";
 
-  const APP_ID = "8e975439";
-  const APP_KEY = "3c385f8e84abc2c5df56cf2125a98c4a";
-
   useEffect(() => {
     async function getRecipes() {
       const response = await fetch(
