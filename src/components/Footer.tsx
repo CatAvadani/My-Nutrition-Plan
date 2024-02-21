@@ -1,5 +1,8 @@
 import { FontAwesomeIcon, FooterStyled } from "./styles/FooterStyled";
 
+const today = new Date();
+const year = today.getFullYear();
+
 export default function Footer() {
   return (
     <FooterStyled>
@@ -20,7 +23,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <p> © 2024 My Nutrition Plan. All rights reserved.</p>
+      <p> © {year} My Nutrition Plan. All rights reserved.</p>
     </FooterStyled>
   );
 }

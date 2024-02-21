@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { BarsIcon } from "./styles/BarsIcon.styled";
 import {
   Button,
@@ -30,9 +31,21 @@ export default function Header() {
       </NavHeader>
       {showLinks && (
         <NavList>
-          <NavItem>Home</NavItem>
-          <NavItem>Explore</NavItem>
-          <NavItem>About</NavItem>
+          <NavItem>
+            <Link className='navLink' to='/home'>
+              Home
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link className='navLink' to='/explore'>
+              Explore
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link className='navLink' to='/about'>
+              About
+            </Link>
+          </NavItem>
         </NavList>
       )}
     </Navigation>

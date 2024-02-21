@@ -75,6 +75,16 @@ export const NavItem = styled.li`
   background-color: transparent;
   color: ${({ theme }) => theme.colors.text};
   cursor: pointer;
+  text-decoration: none;
+
+  .navLink {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.text};
+    transition: all 0.3s ease;
+    &:hover {
+      color: ${({ theme }) => theme.colors.navItem};
+    }
+  }
 
   &:hover {
     color: ${({ theme }) => theme.colors.navItem};
