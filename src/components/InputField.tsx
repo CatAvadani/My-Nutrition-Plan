@@ -1,11 +1,20 @@
-import { ButtonStyled } from "./styles/ButtonSytled";
+import { ButtonStyled } from "./styles/ButtonStyled";
 import { InputStyled } from "./styles/InputStyled";
 
-export default function InputField() {
+export default function InputField({
+  searchRecipe,
+  onSearchSubmit,
+  onSearchInput,
+}) {
   return (
-    <InputStyled>
-      <input type='text' placeholder='Search Recipes' />
-      <ButtonStyled>🔎</ButtonStyled>
+    <InputStyled onSubmit={onSearchSubmit}>
+      <input
+        type='text'
+        placeholder='Search Recipes'
+        value={searchRecipe}
+        onChange={onSearchInput}
+      />
+      <ButtonStyled type='submit'>🔎</ButtonStyled>
     </InputStyled>
   );
 }

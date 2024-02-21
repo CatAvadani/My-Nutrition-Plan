@@ -15,7 +15,7 @@ export const MainContentStyled = styled.div`
   h1 {
     font-size: 2.5rem;
     font-weight: 300;
-    margin-bottom: 2rem;
+    margin-bottom: 1.7rem;
   }
 
   h3 {
@@ -28,7 +28,7 @@ export const MainContentStyled = styled.div`
   .homePageImg {
     width: 200px;
     height: 200px;
-    margin-top: 2rem;
+    margin-top: 1.2rem;
   }
 
   @media (max-width: 768px) {
