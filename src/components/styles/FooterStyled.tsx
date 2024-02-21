@@ -15,6 +15,7 @@ export const FooterStyled = styled.footer`
   font-size: 1.2rem;
   font-weight: 100;
   height: 100%;
+  width: 100%;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 
   ul {

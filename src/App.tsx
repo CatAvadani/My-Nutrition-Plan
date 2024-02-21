@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -25,6 +26,7 @@ interface Recipe {
 function App() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [searchRecipe, setSearchRecipe] = useState("");
+  const location = useLocation();
 
   const handleSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchRecipe(e.target.value);
@@ -38,8 +40,8 @@ function App() {
 
   const endpoint = "https://api.edamam.com/api/recipes/v2";
 
-  const APP_ID = "id";
-  const APP_KEY = "key";
+  // const APP_ID = "id";
+  // const APP_KEY = "key";
 
   useEffect(() => {
     async function getRecipes() {
@@ -67,12 +69,16 @@ function App() {
         <GreenShape />
         <PinkShape />
         <Header />
-        <MainContent
-          recipes={recipes}
-          searchRecipe={searchRecipe}
-          onSearchSubmit={handleSearchSubmit}
-          onSearchInput={handleSearchInput}
-        />
+        <Outlet />
+        {location.pathname === "/home" && (
+          <MainContent
+            recipes={recipes}
+            searchRecipe={searchRecipe}
+            onSearchSubmit={handleSearchSubmit}
+            onSearchInput={handleSearchInput}
+          />
+        )}
+
         <Footer />
       </>
     </ThemeProvider>
