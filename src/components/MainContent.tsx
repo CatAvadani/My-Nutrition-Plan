@@ -6,7 +6,8 @@ export default function MainContent() {
     <MainContentStyled>
       <h1>Explore New Tastes from Home</h1>
       <h3>
-        Customize Your Culinary Journey — Recipes for Every Diet and Preference
+        Your Flavor Story – Recipes That Suit Your Life and Likes. Experience
+        the joy of food that's truly yours.
       </h3>
       <InputField />
       <img className='homePageImg' src='/public/homePage-img.png' alt='' />

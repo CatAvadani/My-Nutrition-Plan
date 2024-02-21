@@ -4,16 +4,13 @@ export const ButtonStyled = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 2rem;
-  background-color: #6acc01;
+  padding: 0.5rem 2rem;
+  background-color: white;
   border: none;
-  border-radius-right: 50%;
-  color: white;
+  border-radius: 0 2rem 2rem 0;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-
+  transition: background-color 0.3s ease;
   &:hover {
     background-color: #5fbc00;
   }

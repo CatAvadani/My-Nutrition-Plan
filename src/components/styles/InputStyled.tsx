@@ -10,7 +10,7 @@ export const InputStyled = styled.div`
   border-radius: 5rem;
   background-color: ${({ theme }) => theme.colors.navItem};
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem;
+  padding: 0;
 
   input {
     display: flex;
@@ -25,8 +25,13 @@ export const InputStyled = styled.div`
 
     &::placeholder {
       color: white;
-      padding-left: 0.5rem;
+      padding-left: 1rem;
       font-size: 1.2rem;
     }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 18rem;
+    margin-top: 2rem;
   }
 `;
