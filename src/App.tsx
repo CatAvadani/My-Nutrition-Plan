@@ -1,5 +1,7 @@
 import { ThemeProvider } from "styled-components";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
+import MainContent from "./components/MainContent";
 import { GlobalStyles } from "./components/styles/Global";
 import { GreenShape } from "./components/styles/GreenShape.styled";
 import { PinkShape } from "./components/styles/PinkShape.styled";
@@ -7,9 +9,9 @@ import { PinkShape } from "./components/styles/PinkShape.styled";
 const theme = {
   colors: {
     header: "rgba(236,253,245,0.4)",
-    footer: "#003333",
+    footer: "transparent",
     navItem: "#6ACC01",
-    text: "#fff",
+    text: "#000",
   },
 };
 
@@ -21,9 +23,8 @@ function App() {
         <GreenShape />
         <PinkShape />
         <Header />
-        {/* <Container>
-          <h1>hello world</h1>
-        </Container> */}
+        <MainContent />
+        <Footer />
       </>
     </ThemeProvider>
   );

@@ -1,28 +1,40 @@
-import { Container } from "./styles/Container.styled";
+import { useState } from "react";
+import { BarsIcon } from "./styles/BarsIcon.styled";
 import {
+  Button,
   Logo,
+  NavHeader,
   NavItem,
   NavList,
-  Navigation,
-  StyledHeader,
 } from "./styles/Header.styled";
+import { Navigation } from "./styles/Navigation.styled";
 
 export default function Header() {
+  const [showLinks, setShowLinks] = useState(true);
+
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
+  };
   return (
-    <StyledHeader>
-      <Container>
-        <Navigation>
-          <Logo>My Nutrition Plan</Logo>
-          <NavList>
-            <NavItem>Home</NavItem>
-            <NavItem>Explore</NavItem>
-            <NavItem>About</NavItem>
-            <NavItem className='icon'>
-              <span>☼</span>
-            </NavItem>
-          </NavList>
-        </Navigation>
-      </Container>
-    </StyledHeader>
+    <Navigation>
+      <NavHeader>
+        <Logo>
+          <span>
+            <img src='/public/logo.png' alt='logo' />
+          </span>{" "}
+          My Nutrition Plan
+        </Logo>
+        <Button className='nav-toggle' onClick={toggleLinks}>
+          <BarsIcon className='fa-solid fa-bars' />
+        </Button>
+      </NavHeader>
+      {showLinks && (
+        <NavList>
+          <NavItem>Home</NavItem>
+          <NavItem>Explore</NavItem>
+          <NavItem>About</NavItem>
+        </NavList>
+      )}
+    </Navigation>
   );
 }
