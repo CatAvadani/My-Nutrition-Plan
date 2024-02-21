@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const GreenShape = styled.div`
+  z-index: -1;
   background-color: #dcfce7;
   position: absolute;
   top: -1rem;
