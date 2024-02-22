@@ -34,7 +34,7 @@ function App() {
 
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submited:", searchRecipe);
+    console.log(searchRecipe);
     setSearchRecipe(searchRecipe);
   };
 
@@ -70,7 +70,7 @@ function App() {
         <PinkShape />
         <Header />
         <Outlet />
-        {location.pathname === "/home" && (
+        {location.pathname === "/" && (
           <MainContent
             recipes={recipes}
             searchRecipe={searchRecipe}

@@ -44,8 +44,7 @@ export const MainContentStyled = styled.div`
     }
 
     .homePageImg {
-      width: 150px;
-      height: 150px;
+      display: none;
     }
   }
 `;

@@ -31,7 +31,7 @@ export default function MainContent({
               <img src={recipe.image} alt={recipe.label} />
             </ImgStyled>
             <h3>{recipe.label}</h3>
-            {/* <p>{recipe.ingredientLines}</p> */}
+            <p className='ingredients'>{recipe.ingredientLines}</p>
             <p>
               <a href={recipe.url} target='_blank' rel='noreferrer'>
                 {recipe.source}

@@ -35,8 +35,6 @@ export const NavList = styled.ul`
   }
 `;
 
-// The rest of your styled-components remain the same
-
 export const NavHeader = styled.div`
   position: relative;
   display: flex;

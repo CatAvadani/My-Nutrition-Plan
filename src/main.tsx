@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
-  Navigate,
   Route,
   RouterProvider,
   createBrowserRouter,
@@ -15,7 +14,6 @@ import Explore from "./Explore.tsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' Component={App}>
-      <Route index element={<Navigate to='home' />} />
       <Route path='/about' Component={About} />
       <Route path='/explore' Component={Explore} />
       <Route path='*' element={<span>404</span>} />

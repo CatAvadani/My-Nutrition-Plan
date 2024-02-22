@@ -32,7 +32,7 @@ export default function Header() {
       {showLinks && (
         <NavList>
           <NavItem>
-            <Link className='navLink' to='/home'>
+            <Link className='navLink' to='/'>
               Home
             </Link>
           </NavItem>
