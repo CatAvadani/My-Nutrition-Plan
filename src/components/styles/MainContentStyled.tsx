@@ -13,8 +13,8 @@ export const MainContentStyled = styled.div`
   max-width: 70%;
 
   h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 500;
     margin-bottom: 1.7rem;
   }
 
@@ -41,10 +41,6 @@ export const MainContentStyled = styled.div`
     h3 {
       font-size: 1.1rem;
       max-width: 100%;
-    }
-
-    .homePageImg {
-      display: none;
     }
   }
 `;

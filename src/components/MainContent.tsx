@@ -25,8 +25,14 @@ export default function MainContent({
         onSearchInput={onSearchInput}
       />
       <RecipesGridStyled>
-        {recipes.map((recipe) => (
-          <RecipeCard key={recipe.label}>
+        {recipes.map((recipe, index) => (
+          // <motion.div
+          //   initial={{ opacity: 0 }}
+          //   animate={{ opacity: 1 }}
+          //   transition={{ duration: 1 }}
+          //   whileHover={{ scale: 1.1 }}
+          // >
+          <RecipeCard key={index}>
             <ImgStyled>
               <img src={recipe.image} alt={recipe.label} />
             </ImgStyled>
@@ -38,6 +44,7 @@ export default function MainContent({
               </a>
             </p>
           </RecipeCard>
+          // </motion.div>
         ))}
       </RecipesGridStyled>
       <img className='homePageImg' src='/public/homePage-img.png' alt='' />

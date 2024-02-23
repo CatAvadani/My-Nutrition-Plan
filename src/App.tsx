@@ -11,7 +11,7 @@ import { PinkShape } from "./components/styles/PinkShape.styled";
 const theme = {
   colors: {
     header: "rgba(236,253,245,0.8)",
-    footer: "#454A5A",
+    footer: "#2b4f2f",
     navItem: "#6ACC01",
     text: "#000",
   },
@@ -26,6 +26,7 @@ interface Recipe {
 function App() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [searchRecipe, setSearchRecipe] = useState("");
+  const [buttonClicked, setButtonClicked] = useState(false);
   const location = useLocation();
 
   const handleSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,14 +35,16 @@ function App() {
 
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(searchRecipe);
-    setSearchRecipe(searchRecipe);
+    setButtonClicked(true);
   };
 
   const endpoint = "https://api.edamam.com/api/recipes/v2";
 
   // const APP_ID = "id";
   // const APP_KEY = "key";
+
+  const APP_ID = "8e975439";
+  const APP_KEY = "3c385f8e84abc2c5df56cf2125a98c4a";
 
   useEffect(() => {
     async function getRecipes() {
@@ -50,17 +53,19 @@ function App() {
       );
       const data = await response.json();
       const recipes = data.hits.map((hit) => hit.recipe);
-      if (searchRecipe === "pasta" || searchRecipe === "pizza") {
+      if (searchRecipe) {
         console.log("Recipes:", recipes);
         setRecipes(recipes);
+        setSearchRecipe("");
+        setButtonClicked(false);
       } else {
         console.log("No recipes found");
       }
     }
-    if (searchRecipe) {
+    if (buttonClicked) {
       getRecipes();
     }
-  }, [searchRecipe]);
+  }, [searchRecipe, buttonClicked]);
 
   return (
     <ThemeProvider theme={theme}>

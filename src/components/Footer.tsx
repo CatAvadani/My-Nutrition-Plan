@@ -23,7 +23,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <p> © {year} My Nutrition Plan. All rights reserved.</p>
+      <p> © {year} My Nutrition Plan. By Catalina Avadani.</p>
     </FooterStyled>
   );
 }
