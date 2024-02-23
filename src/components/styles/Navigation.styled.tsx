@@ -18,6 +18,10 @@ export const Navigation = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  .logoLink {
+    text-decoration: none;
+  }
+
   @media (max-width: 768px) {
     top: 1rem;
     align-items: flex-start;

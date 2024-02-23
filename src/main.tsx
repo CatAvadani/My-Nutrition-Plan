@@ -7,7 +7,6 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import App from "./App.tsx";
-
 import About from "./About.tsx";
 import Explore from "./Explore.tsx";
 import MainContent from "./components/MainContent.tsx";

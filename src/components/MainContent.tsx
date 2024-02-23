@@ -8,6 +8,7 @@ import {
   RecipesGridStyled,
 } from "./styles/RecipesGridStyled";
 
+// Create a type for the props  of the MainContent component
 interface MainContentProps {
   recipes: Recipe[];
   searchRecipe: string;

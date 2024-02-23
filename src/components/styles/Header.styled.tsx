@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const Logo = styled.h1`
+export const Logo = styled.div`
   color: #6acc01;
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   img {
     width: 3rem;
