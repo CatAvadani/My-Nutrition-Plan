@@ -1,3 +1,4 @@
+import { useOutletContext } from "react-router-dom";
 import InputField from "./InputField";
 import { MainContentStyled } from "./styles/MainContentStyled";
 import {
@@ -6,12 +7,9 @@ import {
   RecipesGridStyled,
 } from "./styles/RecipesGridStyled";
 
-export default function MainContent({
-  recipes,
-  searchRecipe,
-  onSearchSubmit,
-  onSearchInput,
-}) {
+export default function MainContent({}) {
+  const { recipes, searchRecipe, onSearchSubmit, onSearchInput } =
+    useOutletContext();
   return (
     <MainContentStyled>
       <h1>Explore New Tastes from Home</h1>
