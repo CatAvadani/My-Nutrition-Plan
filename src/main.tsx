@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
-  Navigate,
   Route,
   RouterProvider,
   createBrowserRouter,
@@ -11,11 +10,12 @@ import App from "./App.tsx";
 
 import About from "./About.tsx";
 import Explore from "./Explore.tsx";
+import MainContent from "./components/MainContent.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' Component={App}>
-      <Route index element={<Navigate to='home' />} />
+      <Route index Component={MainContent} />
       <Route path='/about' Component={About} />
       <Route path='/explore' Component={Explore} />
       <Route path='*' element={<span>404</span>} />

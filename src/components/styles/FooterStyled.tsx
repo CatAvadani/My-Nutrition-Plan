@@ -40,10 +40,10 @@ export const FooterStyled = styled.footer`
 export const FontAwesomeIcon = styled.i`
   margin: 0 1rem;
   font-size: 1.5rem;
-  color: ${({ theme }) => theme.colors.navItem};
+  color: #e5e5e5;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: gray;
+    color: ${({ theme }) => theme.colors.navItem};
   }
 `;
