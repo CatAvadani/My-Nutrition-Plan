@@ -23,8 +23,10 @@ export const Navigation = styled.div`
   }
 
   @media (max-width: 768px) {
+    position: relative;
+    left: 0;
+    transform: none;
     top: 1rem;
-    align-items: flex-start;
     padding: 0.5rem 1rem;
   }
 `;

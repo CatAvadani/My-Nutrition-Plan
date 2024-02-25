@@ -25,19 +25,26 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: center;
 
+  li {  
+    font-size: 1.5rem;
+  }
+
+
   @media (max-width: 768px) {
     position: absolute;
     width: 100%;
     top: 100%;
     left: 0;
     padding: 0.5rem;
-    align-items: center;
     gap: 0.5rem;
+
+    li {
+      padding: 0.5rem 1rem;
+      border-radius: 5rem;
   }
 `;
 
 export const NavHeader = styled.div`
-  position: relative;
   display: flex;
   width: 100%;
   align-items: center;
@@ -100,5 +107,10 @@ export const NavItem = styled.li`
   @media (max-width: 768px) {
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
+    background-color: ${({ theme }) => theme.colors.navItem};
+    .navLink {
+      color: white;
+      font-size: 1.1rem;
+    }
   }
 `;

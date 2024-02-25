@@ -16,6 +16,7 @@ export default function Header() {
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
+
   return (
     <Navigation>
       <NavHeader>

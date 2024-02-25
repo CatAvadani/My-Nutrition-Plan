@@ -7,6 +7,7 @@ import {
   RecipeCard,
   RecipesGridStyled,
 } from "./styles/RecipesGridStyled";
+// import { motion } from "framer-motion";
 
 // Create a type for the props  of the MainContent component
 interface MainContentProps {
@@ -51,7 +52,7 @@ export default function MainContent() {
               </a>
             </p>
           </RecipeCard>
-          // </motion.div>
+          //  </motion.div>
         ))}
       </RecipesGridStyled>
       <img className='homePageImg' src='/public/homePage-img.png' alt='' />
