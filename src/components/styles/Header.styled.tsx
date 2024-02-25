@@ -85,8 +85,8 @@ export const NavItem = styled.li`
 
   .navLink {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.text};
     transition: all 0.3s ease;
+    color: ${({ theme }) => theme.colors.text};
     &:hover {
       color: ${({ theme }) => theme.colors.navItem};
     }
@@ -111,6 +111,12 @@ export const NavItem = styled.li`
     .navLink {
       color: white;
       font-size: 1.1rem;
+      &:hover {
+        color: black;
+      }
+    }
+    &:hover {
+      background-color: white;
     }
   }
 `;

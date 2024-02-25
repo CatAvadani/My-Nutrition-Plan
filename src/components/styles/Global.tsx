@@ -11,10 +11,14 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     font-family: "Roboto", sans-serif;
     transition: all 0.50s linear;
-    @media (min-width: 640px) { // sm: breakpoint
-        padding-top: 36px; // sm:pt-36 equivalent
+    @media (min-width: 768px) { 
+        padding-top: 36px; 
       }
 
+ }
+
+ #root {
+  //height: 100%;
  }
 
  * { 
