@@ -14,4 +14,9 @@ export const ButtonStyled = styled.button`
   &:hover {
     background-color: #5fbc00;
   }
+
+  @media (max-width: 768px) {
+    padding: 0.7rem 1rem;
+    font-size: 1.1rem;
+  }
 `;

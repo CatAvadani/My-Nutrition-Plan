@@ -7,21 +7,26 @@ import { GlobalStyles } from "./components/styles/Global";
 import { GreenShape } from "./components/styles/GreenShape.styled";
 import { PinkShape } from "./components/styles/PinkShape.styled";
 
+// Create a theme object
+
 const theme = {
   colors: {
     header: "rgba(236,253,245,0.8)",
-    footer: "#2b4f2f",
+    // footer: "#2b4f2f",
+    footer: "#27472a",
     navItem: "#6ACC01",
     text: "#000",
   },
 };
 
+// Create types for the API response
 interface ApiResponse {
   hits: Array<{
     recipe: Recipe;
   }>;
 }
 
+// Create a type for the recipe object
 export interface Recipe {
   label: string;
   image: string;
@@ -39,9 +44,13 @@ function App() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [searchRecipe, setSearchRecipe] = useState("");
 
+  // Handle the input field
+
   const handleSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchRecipe(e.target.value);
   };
+
+  // Fetch recipes from the API
 
   const handleSearchSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -58,6 +67,8 @@ function App() {
       console.log("No recipes found");
     }
   };
+
+  // Render the app components with the theme provider
 
   return (
     <ThemeProvider theme={theme}>

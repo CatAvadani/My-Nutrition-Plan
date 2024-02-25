@@ -14,6 +14,7 @@ export const ExploreStyled = styled.div`
   }
 
   @media (max-width: 768px) {
+
     h1 {
       font-size: 1.5rem;
       margin: 1rem;
@@ -31,8 +32,8 @@ export const VideoContainer = styled.div`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    width: 400px;
-    height: 300px;
+    width: 320px;
+    height: 280px;
   }
 
   &:video {

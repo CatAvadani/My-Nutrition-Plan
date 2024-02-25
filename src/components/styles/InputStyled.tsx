@@ -22,9 +22,11 @@ export const InputStyled = styled.form`
     color: white;
     border: none;
     outline: none;
+    font-size: 1.2rem;
+    padding-left: 2.5rem;
 
     &::placeholder {
-      color: white;
+      color: rgba(255, 255, 255, 0.8);
       padding-left: 1rem;
       font-size: 1.2rem;
     }

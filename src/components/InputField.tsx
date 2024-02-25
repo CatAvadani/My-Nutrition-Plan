@@ -1,7 +1,8 @@
 import { ButtonStyled } from "./styles/ButtonStyled";
 import { InputStyled } from "./styles/InputStyled";
 
-interface SearchedRecipes {
+// Create a type for the props of the InputField component
+interface InputFieldProps {
   searchRecipe: string;
   onSearchSubmit: () => void;
   onSearchInput: () => void;
@@ -11,7 +12,7 @@ export default function InputField({
   searchRecipe,
   onSearchSubmit,
   onSearchInput,
-}: SearchedRecipes) {
+}: InputFieldProps) {
   return (
     <InputStyled onSubmit={onSearchSubmit}>
       <input
