@@ -23,7 +23,7 @@ export default function Header() {
         <Link className='logoLink' to='/'>
           <Logo>
             <span>
-              <img src='/public/logo.png' alt='logo' />
+              <img src='/logo.png' alt='logo' />
             </span>{" "}
             My Nutrition Plan
           </Logo>
