@@ -10,17 +10,12 @@ export const ExploreStyled = styled.div`
   text-align: center;
   height: 100%;
 
- 
-  }
-
   @media (max-width: 768px) {
-
     h1 {
       font-size: 1.5rem;
       margin: 1rem;
       width: 100%;
     }
-
   }
 `;
 
@@ -28,6 +23,7 @@ export const VideoContainer = styled.div`
   position: relative;
   width: 500px;
   height: 400px;
+  border-radius: 15rem 0 0 15rem;
   overflow: hidden;
   margin: 0 auto;
 
@@ -44,6 +40,11 @@ export const VideoContainer = styled.div`
     top: 0;
     left: 0;
     z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 2rem;
+    width: 100%;
   }
 `;
 
@@ -64,9 +65,12 @@ export const CenterContainer = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  padding: 2rem;
+  padding: 3rem;
   width: 50%;
   text-align: left;
+  border-radius: 0 15rem 15rem 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+
   .exploreBtn {
     background-color: #5fbc00;
     color: white;
@@ -84,14 +88,21 @@ export const InfoContainer = styled.div`
   }
   p {
     font-size: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3.2rem;
   }
 
   @media (max-width: 768px) {
     width: 100%;
-    padding-left: 0;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: none;
     h2 {
       font-size: 1.2rem;
+    }
+    .exploreBtn {
+      border-radius: 2rem;
+      margin: 0 auto;
     }
   }
 `;

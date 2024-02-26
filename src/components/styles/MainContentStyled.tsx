@@ -28,7 +28,7 @@ export const MainContentStyled = styled.div`
   .homePageImg {
     width: 200px;
     height: 200px;
-    margin-top: 1.2rem;
+    margin-top: 2rem;
   }
 
   @media (max-width: 768px) {

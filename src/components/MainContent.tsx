@@ -32,7 +32,6 @@ export default function MainContent() {
     if (!isSaved) {
       const updatedSavedRecipes = [...savedRecipes, recipeToSave];
       localStorage.setItem("savedRecipes", JSON.stringify(updatedSavedRecipes));
-      console.log("Recipe saved!: ", updatedSavedRecipes);
     }
   };
 

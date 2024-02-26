@@ -6,6 +6,7 @@ export const RecipesGridStyled = styled.div`
   gap: 1rem;
   padding: 1rem;
   margin: 0 auto;
+  margin-top: 4rem;
   max-width: 1200px;
 
   @media (max-width: 768px) {
@@ -18,9 +19,9 @@ export const RecipesGridStyled = styled.div`
 export const RecipeCard = styled.div`
   //background-color: rgba(255, 255, 255, 0.8);
   background-color: #f9fafb;
-  //border-radius: 0.2rem;
+  border-radius: 0.2rem;
   //box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-  // box-shadow: 2px 2px 15px #a3a3a3, -2px -2px 15px #ffffff;
+  //box-shadow: 2px 2px 15px #a3a3a3, -2px -2px 15px #ffffff;
 
   text-align: center;
 
@@ -52,16 +53,21 @@ export const RecipeCard = styled.div`
 
 export const ImgStyled = styled.div`
   width: 100%;
-  height: 250px;
+  height: 300px;
   overflow: hidden;
   // border-radius: 0.2rem;
-  //border-radius: 0.2rem 0.2rem 0 0;
+  border-radius: 0.2rem 0.2rem 0 0;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.3s ease-in-out;
+    // transition: all 0.3s ease-in-out;
+
+    -webkit-transform: translateZ(0); /* Force GPU acceleration */
+    transform: translateZ(0);
+    transition: transform 0.3s ease-in-out;
+
     &:hover {
       transform: scale(1.1);
     }

@@ -14,7 +14,9 @@ const theme = {
     header: "rgba(236,253,245,0.8)",
     footer: "#27472a",
     navItem: "#6ACC01",
+    hoverText: "#6ACC01",
     text: "#000",
+    buttonHover: "#4d9901",
   },
 };
 

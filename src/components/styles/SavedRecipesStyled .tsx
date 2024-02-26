@@ -63,11 +63,14 @@ export const SavedRecipeCard = styled.div`
     transform: translateX(-50%);
     font-size: 1.2rem;
     cursor: pointer;
-    border: 2px solid white;
+    border-radius: 5rem;
     transition: all 0.3s ease-in-out;
     color: white;
-    text-decoration: none;
     padding: 0.5rem 2rem;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.navItem};
+    }
   }
 
   @media (max-width: 768px) {

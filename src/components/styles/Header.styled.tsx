@@ -25,23 +25,18 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: center;
 
-  li {  
+  li {
     font-size: 1.5rem;
-   
   }
   .saved-recipes {
     font-size: 1rem;
-    background-color: #6acc01;
-
-    a {
-      color: white;
-    }
+    padding: 0.5rem 1rem;
+    background-color: ${({ theme }) => theme.colors.navItem};
 
     &:hover {
-      background-color:  #266610;
+      background-color: ${({ theme }) => theme.colors.buttonHover};
       a {
         color: white;
-      
       }
     }
   }
@@ -57,6 +52,7 @@ export const NavList = styled.ul`
     li {
       padding: 0.5rem 1rem;
       border-radius: 5rem;
+    }
   }
 `;
 
@@ -92,8 +88,8 @@ export const NavItem = styled.li`
   justify-content: center;
   padding: 0.4rem 1.5rem;
   border-radius: 5rem;
-  font-size: 1.3rem;
-  font-weight: semibold;
+  font-size: 1.1rem;
+  font-weight: 100;
   background-color: transparent;
   color: ${({ theme }) => theme.colors.text};
   cursor: pointer;

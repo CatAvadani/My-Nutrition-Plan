@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding-top: 28px; 
     position: relative;
-    height: 100vh;
+    height: 100%;
     color: ${({ theme }) => theme.colors.text};
     font-family: "Roboto", sans-serif;
     transition: all 0.50s linear;
@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
  #root {
   //height: 100%;
  }
+
 
  * { 
  box-sizing: border-box;

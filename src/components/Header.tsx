@@ -51,7 +51,7 @@ export default function Header() {
           </NavItem>
           <NavItem className='saved-recipes'>
             <Link className='navLink' to='/savedRecipes'>
-              Saved Recipes
+              Favorites
             </Link>
           </NavItem>
         </NavList>
