@@ -12,7 +12,6 @@ import { PinkShape } from "./components/styles/PinkShape.styled";
 const theme = {
   colors: {
     header: "rgba(236,253,245,0.8)",
-    // footer: "#2b4f2f",
     footer: "#27472a",
     navItem: "#6ACC01",
     text: "#000",

@@ -6,9 +6,10 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import App from "./App.tsx";
 import About from "./About.tsx";
+import App from "./App.tsx";
 import Explore from "./Explore.tsx";
+import { SavedRecipesComponent } from "./SavedRecipes.tsx";
 import MainContent from "./components/MainContent.tsx";
 
 const router = createBrowserRouter(
@@ -17,6 +18,8 @@ const router = createBrowserRouter(
       <Route index Component={MainContent} />
       <Route path='/about' Component={About} />
       <Route path='/explore' Component={Explore} />
+      <Route path='/savedRecipes' Component={SavedRecipesComponent} />
+
       <Route path='*' element={<span>404</span>} />
     </Route>
   )

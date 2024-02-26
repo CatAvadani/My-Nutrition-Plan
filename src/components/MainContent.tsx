@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 import { Recipe } from "../App";
 import InputField from "./InputField";
+import { ButtonSimple } from "./styles/ButtonSimple";
 import { MainContentStyled } from "./styles/MainContentStyled";
 import {
   ImgStyled,
@@ -10,7 +11,7 @@ import {
 // import { motion } from "framer-motion";
 
 // Create a type for the props  of the MainContent component
-interface MainContentProps {
+export interface MainContentProps {
   recipes: Recipe[];
   searchRecipe: string;
   onSearchSubmit: () => void;
@@ -20,6 +21,24 @@ interface MainContentProps {
 export default function MainContent() {
   const { recipes, searchRecipe, onSearchSubmit, onSearchInput } =
     useOutletContext<MainContentProps>();
+
+  const saveRecipeToLocalStorage = (recipeToSave: Recipe) => {
+    const savedRecipes = JSON.parse(
+      localStorage.getItem("savedRecipes") || "[]"
+    );
+
+    const isSaved = savedRecipes.some(
+      (savedRecipe: Recipe) => savedRecipe.label === recipeToSave.label
+    );
+    if (!isSaved) {
+      // Add the new recipe to the array
+      const updatedSavedRecipes = [...savedRecipes, recipeToSave];
+      // Save the updated array back to local storage
+      localStorage.setItem("savedRecipes", JSON.stringify(updatedSavedRecipes));
+      console.log("Recipe saved!: ", updatedSavedRecipes);
+    }
+  };
+
   return (
     <MainContentStyled>
       <h1>Explore New Tastes from Home</h1>
@@ -34,12 +53,6 @@ export default function MainContent() {
       />
       <RecipesGridStyled>
         {recipes.map((recipe, index) => (
-          // <motion.div
-          //   initial={{ opacity: 0 }}
-          //   animate={{ opacity: 1 }}
-          //   transition={{ duration: 1 }}
-          //   whileHover={{ scale: 1.1 }}
-          // >
           <RecipeCard key={index}>
             <ImgStyled>
               <img src={recipe.image} alt={recipe.label} />
@@ -51,11 +64,17 @@ export default function MainContent() {
                 {recipe.source}
               </a>
             </p>
+            <ButtonSimple onClick={() => saveRecipeToLocalStorage(recipe)}>
+              Save
+            </ButtonSimple>
           </RecipeCard>
-          //  </motion.div>
         ))}
       </RecipesGridStyled>
-      <img className='homePageImg' src='/public/homePage-img.png' alt='' />
+      <img
+        className='homePageImg'
+        src='/public/homePage-img.png'
+        alt='food-img'
+      />
     </MainContentStyled>
   );
 }

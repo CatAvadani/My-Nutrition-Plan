@@ -21,6 +21,7 @@ export const RecipeCard = styled.div`
   //border-radius: 0.2rem;
   //box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   // box-shadow: 2px 2px 15px #a3a3a3, -2px -2px 15px #ffffff;
+
   text-align: center;
 
   &:nth-child(odd) {
