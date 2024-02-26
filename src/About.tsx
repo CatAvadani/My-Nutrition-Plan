@@ -9,7 +9,7 @@ export default function About() {
         with the world. We believe that food is a universal language that brings
         people together and we want to share our passion with you.
       </h3>
-      <img className='homePageImg' src='/public/homePage-img.png' alt='' />
+      <img className='homePageImg' src='/homePage-img.png' alt='' />
     </AboutStyled>
   );
 }
