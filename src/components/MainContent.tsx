@@ -8,7 +8,6 @@ import {
   RecipeCard,
   RecipesGridStyled,
 } from "./styles/RecipesGridStyled";
-// import { motion } from "framer-motion";
 
 // Create a type for the props  of the MainContent component
 export interface MainContentProps {
@@ -31,9 +30,7 @@ export default function MainContent() {
       (savedRecipe: Recipe) => savedRecipe.label === recipeToSave.label
     );
     if (!isSaved) {
-      // Add the new recipe to the array
       const updatedSavedRecipes = [...savedRecipes, recipeToSave];
-      // Save the updated array back to local storage
       localStorage.setItem("savedRecipes", JSON.stringify(updatedSavedRecipes));
       console.log("Recipe saved!: ", updatedSavedRecipes);
     }
@@ -70,11 +67,7 @@ export default function MainContent() {
           </RecipeCard>
         ))}
       </RecipesGridStyled>
-      <img
-        className='homePageImg'
-        src='/public/homePage-img.png'
-        alt='food-img'
-      />
+      <img className='homePageImg' src='/homePage-img.png' alt='food-img' />
     </MainContentStyled>
   );
 }
