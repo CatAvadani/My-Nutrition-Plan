@@ -13,7 +13,7 @@ export default function Explore() {
         <VideoContainer>
           <video autoPlay loop muted playsInline className='video-background'>
             <source
-              src='/public/AdobeStock_304598901_Video_HD_Preview.mov'
+              src='/AdobeStock_304598901_Video_HD_Preview.mov'
               type='video/mp4'
             />
             Your browser does not support the video tag.
