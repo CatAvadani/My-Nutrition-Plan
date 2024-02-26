@@ -27,8 +27,24 @@ export const NavList = styled.ul`
 
   li {  
     font-size: 1.5rem;
+   
   }
+  .saved-recipes {
+    font-size: 1rem;
+    background-color: #6acc01;
 
+    a {
+      color: white;
+    }
+
+    &:hover {
+      background-color:  #266610;
+      a {
+        color: white;
+      
+      }
+    }
+  }
 
   @media (max-width: 768px) {
     position: absolute;

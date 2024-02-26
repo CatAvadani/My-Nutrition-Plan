@@ -49,6 +49,11 @@ export default function Header() {
               About
             </Link>
           </NavItem>
+          <NavItem className='saved-recipes'>
+            <Link className='navLink' to='/savedRecipes'>
+              Saved Recipes
+            </Link>
+          </NavItem>
         </NavList>
       )}
     </Navigation>
