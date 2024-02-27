@@ -29,9 +29,6 @@ export const RecipeCard = styled.div`
     margin-top: 4rem;
     // height: 430px;
   }
-  &:nth-child(even) {
-    // height: 470px;
-  }
 
   h3 {
     margin: 1rem auto;
