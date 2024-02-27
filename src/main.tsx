@@ -9,8 +9,8 @@ import {
 import About from "./About.tsx";
 import App from "./App.tsx";
 import Explore from "./Explore.tsx";
+import MainContent from "./MainContent.tsx";
 import { SavedRecipesComponent } from "./SavedRecipes.tsx";
-import MainContent from "./components/MainContent.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

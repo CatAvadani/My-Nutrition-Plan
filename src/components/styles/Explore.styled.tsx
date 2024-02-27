@@ -84,10 +84,12 @@ export const InfoContainer = styled.div`
 
   h2 {
     font-size: 1.5rem;
+    font-weight: 100;
     margin-bottom: 3rem;
   }
   p {
     font-size: 1rem;
+    line-height: 1.8rem;
     margin-bottom: 3.2rem;
   }
 
@@ -99,6 +101,9 @@ export const InfoContainer = styled.div`
     box-shadow: none;
     h2 {
       font-size: 1.2rem;
+    }
+    p {
+      width: 100%;
     }
     .exploreBtn {
       border-radius: 2rem;

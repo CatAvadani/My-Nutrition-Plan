@@ -8,15 +8,13 @@ export const ButtonStyled = styled.button`
   background-color: white;
   border: none;
   border-radius: 0 2rem 2rem 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.buttonHover};
-
-    /* background-color: #5fbc00; */
   }
 
   @media (max-width: 768px) {

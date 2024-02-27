@@ -46,7 +46,7 @@ export const SavedRecipesComponent = () => {
                   <img src={recipe.image} alt={recipe.label} />
                   <div className='centerCard'>
                     <p>{recipe.label}</p>
-                    <a href={recipe.url} target='_blank' rel='noreferrer'>
+                    <a href={recipe.url} target='_blank'>
                       View Recipe
                     </a>
                   </div>

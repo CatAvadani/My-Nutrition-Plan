@@ -17,11 +17,8 @@ export const RecipesGridStyled = styled.div`
 `;
 
 export const RecipeCard = styled.div`
-  //background-color: rgba(255, 255, 255, 0.8);
-  background-color: #f9fafb;
+  background-color: ${({ theme }) => theme.colors.backgroundCard};
   border-radius: 0.2rem;
-  //box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-  //box-shadow: 2px 2px 15px #a3a3a3, -2px -2px 15px #ffffff;
 
   text-align: center;
 
@@ -52,16 +49,14 @@ export const ImgStyled = styled.div`
   width: 100%;
   height: 300px;
   overflow: hidden;
-  // border-radius: 0.2rem;
   border-radius: 0.2rem 0.2rem 0 0;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // transition: all 0.3s ease-in-out;
-
-    -webkit-transform: translateZ(0); /* Force GPU acceleration */
+    // This solves the issue of the hover effect on the image on Safari browsers
+    -webkit-transform: translateZ(0);
     transform: translateZ(0);
     transition: transform 0.3s ease-in-out;
 

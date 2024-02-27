@@ -13,12 +13,14 @@ export const AboutStyled = styled.div`
   max-width: 70%;
 
   h1 {
-    margin-top: 6rem;
+    font-weight: 400;
+    font-size: 2rem;
   }
 
   h3 {
     margin-top: 2rem;
     font-weight: 100;
+    line-height: 1.8rem;
     width: 80%;
   }
   .homePageImg {
@@ -31,7 +33,8 @@ export const AboutStyled = styled.div`
     h1 {
       font-size: 1.5rem;
       margin: 1rem;
-      margin-top: 5rem;
+    }
+    h3 {
       width: 100%;
     }
   }
