@@ -1,63 +1,40 @@
-# React + TypeScript + Vite
-
 # My Nutrition Plan
 
 ## Project Description
 
-My Nutrition Plan is a React-based web application designed to help users explore a variety of recipes. It allows users to search for recipes based on ingredients or dish names and save their favorite recipes for later reference. The app is built with React and TypeScript, utilizing Styled Components for styling and React Router for navigation.
+My Nutrition Plan is a React web application designed to help users explore a variety of recipes. It allows users to search for recipes based on ingredients or dish names and save their favorite recipes for later reference. The app is built with React and TypeScript, utilizing Styled Components for styling and React Router for navigation. It serves as a practical application of React's powerful features, including component-based architecture, state management, and API integration.
 
-## Getting Started
+API used: [Edamam Recipe API](https://developer.edamam.com/edamam-recipe-api)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+## Prerequisites
 
-### Prerequisites
+Before running the project, make sure you have the following installed:
 
-Before running the project, make sure you have Node.js and npm installed on your machine.
-
-- [Node.js](https://nodejs.org/)
-- npm (comes with Node.js)
+- Node.js
+- npm or yarn
 
 ### Installation
 
-Clone the repository to your local machine:
+Clone the repository to your local machine and install the dependencies:
 
 git clone https://github.com/CatAvadani/My-Nutrition-Plan.git
 
-Certainly! Here's a basic structure for your README.md file that you can use as a template for your project documentation.
+npm install
 
-markdown
-Copy code
+npm run dev
 
-# My Nutrition Plan
+### Live Demo
 
-## Project Description
+You can see a live version of the app here:
+https://my-nutrition-plan.vercel.app/
 
-My Nutrition Plan is a React-based web application designed to help users explore a variety of recipes. It allows users to search for recipes based on ingredients or dish names and save their favorite recipes for later reference. The app is built with React and TypeScript, utilizing Styled Components for styling and React Router for navigation.
+### Features
 
-## Getting Started
+Recipe Search
+Save Favorite Recipes
+Responsive Design
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+### Author
 
-### Prerequisites
-
-Before running the project, make sure you have Node.js and npm installed on your machine.
-
-- [Node.js](https://nodejs.org/)
-- npm (comes with Node.js)
-
-### Installation
-
-Clone the repository to your local machine:
-
-- git clone https://github.com/your-username/your-repo-name.git
-- Navigate to the project directory
-- npm install
-- npm run dev
-
-```
-
-```
-
-```
-
-```
+Catalina Avadani
+https://github.com/CatAvadani
