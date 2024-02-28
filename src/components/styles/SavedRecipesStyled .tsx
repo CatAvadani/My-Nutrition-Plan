@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const SavedRecipesStyled = styled.div`
   display: grid;
   position: relative;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
   margin: 0 auto;
   gap: 1.7rem;
   padding: 1.5rem;
-  max-width: 1200px;
+  max-width: 70%;
 
   .delete {
     position: absolute;
@@ -41,20 +41,11 @@ export const SavedRecipeCard = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 0.2rem;
+  background-color: ${({ theme }) => theme.colors.backgroundCard};
   transition: all 0.3s ease-in-out;
   overflow: hidden;
-  position: relative;
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.4;
-  }
+  padding-bottom: 2rem;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 
   img {
     width: 100%;
@@ -63,32 +54,15 @@ export const SavedRecipeCard = styled.div`
   }
 
   p {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
+    font-weight: bold;
   }
 
   a {
-    position: absolute;
-    z-index: 1;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5rem;
+    color: ${({ theme }) => theme.colors.text};
     transition: all 0.3s ease-in-out;
-    color: white;
-    padding: 0.5rem 2rem;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.navItem};
+      color: ${({ theme }) => theme.colors.hoverText};
     }
   }
 

@@ -21,7 +21,9 @@ export default function InputField({
         value={searchRecipe}
         onChange={onSearchInput}
       />
-      <ButtonStyled type='submit'>🔎</ButtonStyled>
+      <ButtonStyled type='submit'>
+        <i className='fas fa-search'></i>
+      </ButtonStyled>
     </InputStyled>
   );
 }

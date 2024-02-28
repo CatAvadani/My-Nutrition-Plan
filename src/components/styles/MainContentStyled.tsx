@@ -10,7 +10,8 @@ export const MainContentStyled = styled.div`
   margin-top: 6rem;
   text-align: center;
   height: 100%;
-  max-width: 70%;
+  width: 80%;
+  /* max-width: 80%; */
 
   h1 {
     font-size: 2rem;

@@ -12,6 +12,7 @@ import { PinkShape } from "./components/styles/PinkShape.styled";
 const theme = {
   colors: {
     header: "rgba(236,253,245,0.8)",
+    backgroundCard: "#f9fafb",
     footer: "#27472a",
     navItem: "#6ACC01",
     hoverText: "#6ACC01",
