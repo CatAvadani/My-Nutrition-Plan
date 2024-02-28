@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SavedRecipesStyled = styled.div`
   display: grid;
   position: relative;
-  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
   margin: 0 auto;
   gap: 1.7rem;
   padding: 1.5rem;

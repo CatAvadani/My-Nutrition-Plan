@@ -4,7 +4,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: #F3F4F6; 
     color: #1A202C; 
-    margin: 0;
+    margin: 0 ;
     padding-top: 28px; 
     position: relative;
     height: 100%;

@@ -23,11 +23,11 @@ export const InputStyled = styled.form`
     border: none;
     outline: none;
     font-size: 1.2rem;
-    padding-left: 2.5rem;
+    padding-left: 1.7rem;
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.8);
-      padding-left: 1rem;
+      padding-left: 0.5rem;
       font-size: 1.2rem;
     }
   }

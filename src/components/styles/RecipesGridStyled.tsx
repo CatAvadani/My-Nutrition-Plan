@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const RecipesGridStyled = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
   gap: 1rem;
   padding: 1rem;
   margin: 0 auto;
   margin-top: 4rem;
-  max-width: 1200px;
+  max-width: 90%;
 
   @media (max-width: 768px) {
     padding: 1rem 0;

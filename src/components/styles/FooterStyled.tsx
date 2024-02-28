@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const FooterStyled = styled.footer`
   background-color: ${({ theme }) => theme.colors.footer};
+  width: 100%;
   color: white;
   h2 {
     font-size: 1.5rem;
@@ -88,6 +89,9 @@ export const NewsletterStyled = styled.div`
     margin: 1rem 0;
     border-radius: 0 2rem 2rem 0;
 
+    button {
+      font-size: 1.5rem;
+    }
     input {
       font-size: 1rem;
       padding: 0.5rem;
@@ -105,6 +109,11 @@ export const NewsletterStyled = styled.div`
 
     form {
       border-radius: 2rem;
-   
+
+      button {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.8rem;
+      }
+    }
   }
 `;

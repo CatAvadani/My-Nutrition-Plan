@@ -4,7 +4,7 @@ export const ButtonStyled = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.6rem 2rem;
+  padding: 0.7rem 2rem;
   background-color: white;
   border: none;
   border-radius: 0 2rem 2rem 0;
@@ -18,7 +18,6 @@ export const ButtonStyled = styled.button`
   }
 
   @media (max-width: 768px) {
-    padding: 0.7rem 1rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 `;
