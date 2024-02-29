@@ -1,4 +1,4 @@
-import { AboutStyled } from "./components/styles/About.styled";
+import { AboutStyled } from "../components/styles/About.styled";
 
 export default function About() {
   return (

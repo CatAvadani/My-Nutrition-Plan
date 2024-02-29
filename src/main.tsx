@@ -6,11 +6,11 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import About from "./About.tsx";
 import App from "./App.tsx";
-import Explore from "./Explore.tsx";
-import MainContent from "./MainContent.tsx";
-import { SavedRecipesComponent } from "./SavedRecipes.tsx";
+import About from "./pages/About.tsx";
+import Explore from "./pages/Explore.tsx";
+import MainContent from "./pages/MainContent.tsx";
+import { SavedRecipesComponent } from "./pages/SavedRecipes.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

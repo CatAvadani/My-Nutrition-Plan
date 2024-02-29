@@ -1,13 +1,13 @@
-import { ButtonStyled } from "./styles/ButtonStyled";
-import { FooterLinks } from "./styles/FooterLinks.styled";
+import { ButtonStyled } from "./styles/ButtonStyled.styled";
 import {
   FontAwesomeIcon,
   FooterMainContent,
   FooterStyled,
   MediaLinks,
   NewsletterStyled,
-} from "./styles/FooterStyled";
-import { InputStyled } from "./styles/InputStyled";
+} from "./styles/Footer.styled";
+import { FooterLinks } from "./styles/FooterLinks.styled";
+import { InputStyled } from "./styles/Input.styled";
 
 const today = new Date();
 const year = today.getFullYear();
