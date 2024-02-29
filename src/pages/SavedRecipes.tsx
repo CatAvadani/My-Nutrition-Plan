@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Recipe } from "./App";
-import { FontAwesomeIcon } from "./components/styles/FooterStyled";
+import { Recipe } from "../App";
+import { FontAwesomeIcon } from "../components/styles/Footer.styled";
 import {
   CenterDiv,
   SavedRecipeCard,
   SavedRecipesStyled,
-} from "./components/styles/SavedRecipesStyled ";
+} from "../components/styles/SavedRecipes.styled ";
 
 export const SavedRecipesComponent = () => {
   const [savedRecipes, setSavedRecipes] = useState<Recipe[]>([]);

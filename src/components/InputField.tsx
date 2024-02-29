@@ -1,5 +1,5 @@
-import { ButtonStyled } from "./styles/ButtonStyled";
-import { InputStyled } from "./styles/InputStyled";
+import { ButtonStyled } from "./styles/ButtonStyled.styled";
+import { InputStyled } from "./styles/Input.styled";
 
 // Create a type for the props of the InputField component
 interface InputFieldProps {

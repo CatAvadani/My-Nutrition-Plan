@@ -1,13 +1,13 @@
 import { useOutletContext } from "react-router-dom";
-import { Recipe } from "./App";
-import InputField from "./components/InputField";
-import { ButtonSimple } from "./components/styles/ButtonSimple";
-import { MainContentStyled } from "./components/styles/MainContentStyled";
+import { Recipe } from "../App";
+import InputField from "../components/InputField";
+import { ButtonSimple } from "../components/styles/ButtonSimple.styled";
+import { MainContentStyled } from "../components/styles/MainContent.styled";
 import {
   ImgStyled,
   RecipeCard,
   RecipesGridStyled,
-} from "./components/styles/RecipesGridStyled";
+} from "../components/styles/RecipesGrid.styled";
 
 // Create a type for the props  of the MainContent component
 export interface MainContentProps {

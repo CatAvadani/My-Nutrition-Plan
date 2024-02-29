@@ -1,10 +1,10 @@
-import { ButtonStyled } from "./components/styles/ButtonStyled";
+import { ButtonStyled } from "../components/styles/ButtonStyled.styled";
 import {
   CenterContainer,
   ExploreStyled,
   InfoContainer,
   VideoContainer,
-} from "./components/styles/Explore.styled";
+} from "../components/styles/Explore.styled";
 
 export default function Explore() {
   return (
