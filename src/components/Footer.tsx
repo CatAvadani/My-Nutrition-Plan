@@ -20,7 +20,7 @@ export default function Footer() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm({ mode: "onChange" });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -30,7 +30,7 @@ export default function Footer() {
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
-    }, 5000);
+    }, 3000);
   };
   console.log("Errors", errors);
   return (
