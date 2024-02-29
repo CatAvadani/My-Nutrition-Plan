@@ -98,6 +98,10 @@ export const NewsletterStyled = styled.div`
     }
   }
 
+  span {
+    color: red;
+  }
+
   @media (max-width: 768px) {
     margin-bottom: 2rem;
     text-align: center;

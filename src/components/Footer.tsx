@@ -1,3 +1,4 @@
+import { useForm, type FieldValues } from "react-hook-form";
 import { ButtonStyled } from "./styles/ButtonStyled.styled";
 import {
   FontAwesomeIcon,
@@ -13,18 +14,50 @@ const today = new Date();
 const year = today.getFullYear();
 
 export default function Footer() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitted },
+    reset,
+  } = useForm();
+
+  const onSubmit = async (data: FieldValues) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    reset();
+  };
+  console.log("Errors", errors);
   return (
     <FooterStyled>
       <FooterMainContent>
         <NewsletterStyled>
           <h2>Newsletter</h2>
           <p>
-            Subscribe to our newsletter to receive the latest news and updates
+            Subscribe to our newsletter to receive the latest news and updates.
           </p>
-          <InputStyled>
-            <input type='email' placeholder='Email Address' />
-            <ButtonStyled type='submit'>Subscribe</ButtonStyled>
+          <p>Email *</p>
+          <InputStyled onSubmit={handleSubmit(onSubmit)}>
+            <input
+              type='email'
+              placeholder='Email Address'
+              {...register("email", {
+                required: "true",
+                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              })}
+            />
+            <ButtonStyled
+              disabled={isSubmitted}
+              type='submit'
+              value='Subscribe'
+            >
+              Subscribe
+            </ButtonStyled>
           </InputStyled>
+          {errors.email?.type === "required" && (
+            <span>Please enter a valid email address.</span>
+          )}
+          {errors.email?.type === "pattern" && (
+            <span>This is not a valid email address.</span>
+          )}
         </NewsletterStyled>
         <FooterLinks>
           <div className='div2-1'>
