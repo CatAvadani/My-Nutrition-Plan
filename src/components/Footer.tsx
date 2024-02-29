@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm, type FieldValues } from "react-hook-form";
 import { ButtonStyled } from "./styles/ButtonStyled.styled";
 import {
@@ -17,13 +18,19 @@ export default function Footer() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitted },
+    formState: { errors },
     reset,
   } = useForm();
 
-  const onSubmit = async (data: FieldValues) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const onSubmit = (data: FieldValues) => {
+    console.log(data);
     reset();
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 5000);
   };
   console.log("Errors", errors);
   return (
@@ -40,23 +47,20 @@ export default function Footer() {
               type='email'
               placeholder='Email Address'
               {...register("email", {
-                required: "true",
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                required: "The email address is required.",
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: "Please enter a valid email address.",
+                },
               })}
             />
-            <ButtonStyled
-              disabled={isSubmitted}
-              type='submit'
-              value='Subscribe'
-            >
-              Subscribe
-            </ButtonStyled>
+            <ButtonStyled type='submit'>Subscribe</ButtonStyled>
           </InputStyled>
-          {errors.email?.type === "required" && (
-            <span>Please enter a valid email address.</span>
-          )}
-          {errors.email?.type === "pattern" && (
-            <span>This is not a valid email address.</span>
+          {errors.email && <span>{`${errors.email.message}`}</span>}
+          {isSubmitted && (
+            <span className='subscription-msg'>
+              Thank you for subscribing to our newsletter!
+            </span>
           )}
         </NewsletterStyled>
         <FooterLinks>

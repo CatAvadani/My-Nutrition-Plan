@@ -100,6 +100,10 @@ export const NewsletterStyled = styled.div`
 
   span {
     color: red;
+    font-size: 1rem;
+  }
+  .subscription-msg {
+    color: white;
   }
 
   @media (max-width: 768px) {
