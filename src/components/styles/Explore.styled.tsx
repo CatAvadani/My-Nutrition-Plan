@@ -13,6 +13,7 @@ export const ExploreStyled = styled.div`
   /* color: ${({ theme }) => theme.colors.altText}; */
 
   @media (max-width: 768px) {
+    color: ${({ theme }) => theme.colors.altText};
     h1 {
       font-size: 1.5rem;
       margin: 1rem;

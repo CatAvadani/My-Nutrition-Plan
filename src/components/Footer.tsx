@@ -32,7 +32,6 @@ export default function Footer() {
       setIsSubmitted(false);
     }, 3000);
   };
-  console.log("Errors", errors);
   return (
     <FooterStyled>
       <FooterMainContent>

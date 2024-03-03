@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
     margin: 0 ;
     padding-top: 28px; 
     position: relative;
