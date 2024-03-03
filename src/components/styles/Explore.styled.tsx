@@ -9,6 +9,8 @@ export const ExploreStyled = styled.div`
   margin-top: 6rem;
   text-align: center;
   height: 100%;
+  color: ${({ theme }) => theme.colors.text};
+  /* color: ${({ theme }) => theme.colors.altText}; */
 
   @media (max-width: 768px) {
     h1 {

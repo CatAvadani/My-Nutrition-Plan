@@ -19,7 +19,7 @@ export const RecipesGridStyled = styled.div`
 export const RecipeCard = styled.div`
   background-color: ${({ theme }) => theme.colors.backgroundCard};
   border-radius: 0.2rem;
-
+  color: ${({ theme }) => theme.colors.cardText};
   text-align: center;
 
   &:nth-child(odd) {
@@ -40,8 +40,10 @@ export const RecipeCard = styled.div`
     padding: 0.5rem;
   }
   a {
-    text-decoration: none;
-    color: #000;
+    color: ${({ theme }) => theme.colors.cardText};
+    &:hover {
+      color: ${({ theme }) => theme.colors.hoverText};
+    }
   }
 `;
 

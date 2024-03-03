@@ -42,6 +42,7 @@ export const SavedRecipeCard = styled.div`
   align-items: center;
   border-radius: 0.2rem;
   background-color: ${({ theme }) => theme.colors.backgroundCard};
+  color: ${({ theme }) => theme.colors.cardText};
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   padding-bottom: 2rem;
@@ -58,7 +59,7 @@ export const SavedRecipeCard = styled.div`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.cardText};
     transition: all 0.3s ease-in-out;
 
     &:hover {
