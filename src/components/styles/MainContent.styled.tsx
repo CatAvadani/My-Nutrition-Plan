@@ -33,6 +33,7 @@ export const MainContentStyled = styled.div`
   }
 
   @media (max-width: 768px) {
+    color: ${({ theme }) => theme.colors.altText};
     h1 {
       font-size: 1.5rem;
       margin: 1rem;

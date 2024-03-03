@@ -6,6 +6,9 @@ export const AboutStyled = styled.div`
   align-items: center;
   padding: 1rem;
   margin: 1rem auto;
+  color: ${({ theme }) => theme.colors.text};
+  /* color: ${({ theme }) => theme.colors.altText}; */
+
   gap: 1rem;
   margin-top: 6rem;
   text-align: center;
@@ -30,6 +33,7 @@ export const AboutStyled = styled.div`
   }
 
   @media (max-width: 768px) {
+    color: ${({ theme }) => theme.colors.altText};
     h1 {
       font-size: 1.5rem;
       margin: 1rem;

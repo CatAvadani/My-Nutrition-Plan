@@ -2,8 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   body {
-    background-color: #F3F4F6; 
-    color: #1A202C; 
+    background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
     margin: 0 ;
     padding-top: 28px; 
     position: relative;
@@ -11,6 +11,12 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     font-family: "Roboto", sans-serif;
     transition: all 0.50s linear;
+
+
+    @media (min-width: 640px) { 
+        padding-top: 32px;
+}
+    
     @media (min-width: 768px) { 
         padding-top: 36px; 
       }

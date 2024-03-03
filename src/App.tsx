@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { MoonIcon, SunIcon } from "@heroicons/react/16/solid";
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import Footer from "./components/Footer";
@@ -6,20 +7,44 @@ import Header from "./components/Header";
 import { GlobalStyles } from "./components/styles/Global";
 import { GreenShape } from "./components/styles/GreenShape.styled";
 import { PinkShape } from "./components/styles/PinkShape.styled";
+import { ThemeButton } from "./components/styles/ThemeButton";
 
-// Create a theme object
-
-const theme = {
+const lightTheme = {
+  body: "#F3F4F6",
   colors: {
     header: "rgba(236,253,245,0.8)",
+    navBackground: "rgba(255, 255, 255, 0.8)",
     backgroundCard: "#f9fafb",
     footer: "#27472a",
     navItem: "#6ACC01",
     hoverText: "#6ACC01",
     text: "#000",
     buttonHover: "#4d9901",
+    altText: "black",
+    altBtn: " rgba(106, 204, 1, 0.3)",
   },
 };
+
+const darkTheme = {
+  body: "#1A202C",
+  colors: {
+    header: "rgba(236,253,245,0.8)",
+    navBackground: "rgba(231, 231, 232, 0.6)",
+    backgroundCard: "#2d3748",
+    footer: "transparent",
+    navItem: "#6ACC01",
+    hoverText: "#6ACC01",
+    buttonHover: "#4d9901",
+    cardText: "#fff",
+    text: "black",
+    altText: "white",
+    altBtn: "rgba(255, 255, 255, 0.3)",
+  },
+
+  text: "#fff",
+};
+
+type Theme = "light" | "dark";
 
 // Create types for the API response
 interface ApiResponse {
@@ -45,6 +70,29 @@ function App() {
 
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [searchRecipe, setSearchRecipe] = useState("");
+
+  const [theme, setTheme] = useState<Theme>("light");
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+      window.localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      setTheme("light");
+      window.localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
+  useEffect(() => {
+    const localMode = window.localStorage.getItem("theme") as Theme | null;
+    if (localMode) {
+      setTheme(localMode);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    }
+  }, []);
 
   // Handle the input field
 
@@ -73,7 +121,7 @@ function App() {
   // Render the app components with the theme provider
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <>
         <GlobalStyles />
         <GreenShape />
@@ -89,6 +137,9 @@ function App() {
         />
 
         <Footer />
+        <ThemeButton onClick={toggleTheme}>
+          {theme === "light" ? <SunIcon /> : <MoonIcon />}
+        </ThemeButton>
       </>
     </ThemeProvider>
   );

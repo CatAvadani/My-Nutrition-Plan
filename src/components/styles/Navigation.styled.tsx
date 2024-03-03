@@ -10,9 +10,10 @@ export const Navigation = styled.div`
   max-width: 90%;
   margin: 0 auto;
   padding: 0 2rem;
-  background-color: rgba(256, 256, 256, 0.8);
+  /* background-color: rgba(256, 256, 256, 0.8); */
+  background-color: ${({ theme }) => theme.colors.navBackground};
   border-radius: 5rem;
-  color: black;
+  color: ${({ theme }) => theme.colors.text};
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
